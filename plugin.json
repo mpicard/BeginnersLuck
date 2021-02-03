@@ -12,5 +12,12 @@
   "sourceUrl": "",
   "donateUrl": "",
   "changelogUrl": "",
-  "modules": []
+  "modules": [
+    {
+      "slug": "Comparator",
+      "name": "Comparator",
+      "description": "Given two inputs, outputs a high voltage if input 1 is higher than input 2, otherwise output is a low voltage",
+      "tags": []
+    }
+  ]
 }
