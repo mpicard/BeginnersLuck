@@ -54,29 +54,27 @@ struct MuxDemux : Module
     selMux = selDemux = 0;
   }
 
-  void process(const ProcessArgs &args) override;
-};
-
-void MuxDemux::process(const ProcessArgs &args)
-{
-  // Mux
-  lights[selMux].setBrightness(0.f);
-  selMux = (unsigned int)clamp((int)params[PARAM_M].getValue(), 0, NUM_MUX_INPUTS);
-  lights[selMux].setBrightness(1.f);
-
-  if (outputs[OUTPUT_MAIN].isConnected() && outputs[selMux].isConnected())
+  void process(const ProcessArgs &args) override
   {
-    outputs[OUTPUT_MAIN].setVoltage(inputs[selMux].getVoltage());
-  }
+    // Mux
+    lights[selMux].setBrightness(0.f);
+    selMux = (unsigned int)clamp((int)params[PARAM_M].getValue(), 0, NUM_MUX_INPUTS);
+    lights[selMux].setBrightness(1.f);
 
-  // Demux
-  lights[selDemux + NUM_MUX_INPUTS + 1].setBrightness(0.f);
-  selDemux = (unsigned int)clamp((int)params[PARAM_D].getValue(), 0, NUM_DEMUX_OUTPUTS);
-  lights[selDemux + NUM_MUX_INPUTS + 1].setBrightness(1.f);
+    if (outputs[OUTPUT_MAIN].isConnected() && outputs[selMux].isConnected())
+    {
+      outputs[OUTPUT_MAIN].setVoltage(inputs[selMux].getVoltage());
+    }
 
-  if (inputs[INPUT_MAIN].isConnected() && outputs[selDemux].isConnected())
-  {
-    outputs[selDemux].setVoltage(inputs[INPUT_MAIN].getVoltage());
+    // Demux
+    lights[selDemux + NUM_MUX_INPUTS + 1].setBrightness(0.f);
+    selDemux = (unsigned int)clamp((int)params[PARAM_D].getValue(), 0, NUM_DEMUX_OUTPUTS);
+    lights[selDemux + NUM_MUX_INPUTS + 1].setBrightness(1.f);
+
+    if (inputs[INPUT_MAIN].isConnected() && outputs[selDemux].isConnected())
+    {
+      outputs[selDemux].setVoltage(inputs[INPUT_MAIN].getVoltage());
+    }
   }
 };
 

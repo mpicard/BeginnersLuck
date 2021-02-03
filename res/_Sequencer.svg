@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="60.959999mm"
+   height="128.5mm"
+   viewBox="0 0 60.96 128.5"
+   version="1.1"
+   id="svg8"
+   inkscape:version="1.0.2 (e86c8708, 2021-01-15)"
+   sodipodi:docname="_Sequencer.svg">
+  <defs
+     id="defs2" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="2.4960869"
+     inkscape:cx="127.09927"
+     inkscape:cy="93.831421"
+     inkscape:document-units="mm"
+     inkscape:current-layer="layer3"
+     inkscape:document-rotation="0"
+     showgrid="true"
+     inkscape:window-width="1680"
+     inkscape:window-height="1005"
+     inkscape:window-x="1736"
+     inkscape:window-y="23"
+     inkscape:window-maximized="0"
+     inkscape:snap-bbox="true"
+     inkscape:bbox-paths="false"
+     inkscape:bbox-nodes="true"
+     inkscape:snap-bbox-edge-midpoints="false"
+     inkscape:snap-object-midpoints="true"
+     inkscape:snap-page="false"
+     objecttolerance="20"
+     inkscape:snap-nodes="false"
+     inkscape:snap-others="true"
+     inkscape:snap-to-guides="false"
+     inkscape:snap-grids="true">
+    <inkscape:grid
+       type="xygrid"
+       id="grid833"
+       dotted="true"
+       empspacing="5"
+       originx="0"
+       originy="0"
+       units="mm" />
+  </sodipodi:namedview>
+  <metadata
+     id="metadata5">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="background"
+     inkscape:groupmode="layer"
+     id="layer1"
+     style="display:inline"
+     sodipodi:insensitive="true">
+    <rect
+       style="fill:#aaccff;fill-rule:evenodd;stroke-width:0.264812"
+       id="rect835"
+       width="60.959995"
+       height="2.6458335"
+       x="2.5431316e-06"
+       y="-7.9472862e-08" />
+    <rect
+       style="opacity:1;fill:#e6e6e6;stroke-width:0.263615"
+       id="rect16"
+       width="60.959999"
+       height="125.85416"
+       x="0"
+       y="2.6458335" />
+    <rect
+       style="display:inline;mix-blend-mode:normal;fill:#999999;stroke-width:0.269827"
+       id="rect413"
+       width="17.277878"
+       height="14.552083"
+       x="34.395832"
+       y="15.874995"
+       rx="2"
+       ry="2" />
+  </g>
+  <g
+     inkscape:groupmode="layer"
+     id="layer2"
+     inkscape:label="components"
+     style="display:inline"
+     sodipodi:insensitive="true">
+    <ellipse
+       style="fill:#ff0000;stroke-width:0.264583"
+       id="path42"
+       cx="10.069285"
+       cy="43.65625"
+       rx="4.648191"
+       ry="4.7981329" />
+    <ellipse
+       style="display:inline;fill:#ff0000;stroke-width:0.264583"
+       id="path42-3-1"
+       cx="23.67643"
+       cy="43.65625"
+       rx="4.648191"
+       ry="4.7981329" />
+    <ellipse
+       style="display:inline;fill:#ff0000;stroke-width:0.264583"
+       id="path42-3-1-2"
+       cx="37.283573"
+       cy="43.65625"
+       rx="4.648191"
+       ry="4.7981329" />
+    <ellipse
+       style="display:inline;fill:#ff0000;stroke-width:0.264583"
+       id="path42-3-1-2-6"
+       cx="50.890713"
+       cy="43.65625"
+       rx="4.648191"
+       ry="4.7981329" />
+    <circle
+       style="fill:#ff00ff;stroke-width:0.264583"
+       id="path258"
+       cx="10.069285"
+       cy="52.239582"
+       r="2" />
+    <circle
+       style="display:inline;fill:#ff00ff;stroke-width:0.264583"
+       id="path258-5"
+       cx="23.67643"
+       cy="52.239582"
+       r="2" />
+    <circle
+       style="display:inline;fill:#ff00ff;stroke-width:0.264583"
+       id="path258-5-3"
+       cx="37.283573"
+       cy="52.239582"
+       r="2" />
+    <circle
+       style="display:inline;fill:#ff00ff;stroke-width:0.264583"
+       id="path258-5-3-5"
+       cx="50.890713"
+       cy="52.239582"
+       r="2" />
+    <g
+       id="g385"
+       transform="translate(0.24190569)">
+      <ellipse
+         style="display:inline;fill:#ff0000;stroke-width:0.264583"
+         id="path42-1"
+         cx="9.8273802"
+         cy="66.145836"
+         rx="4.648191"
+         ry="4.7981329" />
+      <ellipse
+         style="display:inline;fill:#ff0000;stroke-width:0.264583"
+         id="path42-3-1-9"
+         cx="23.434523"
+         cy="66.145836"
+         rx="4.648191"
+         ry="4.7981329" />
+      <ellipse
+         style="display:inline;fill:#ff0000;stroke-width:0.264583"
+         id="path42-3-1-2-3"
+         cx="37.041668"
+         cy="66.145836"
+         rx="4.648191"
+         ry="4.7981329" />
+      <ellipse
+         style="display:inline;fill:#ff0000;stroke-width:0.264583"
+         id="path42-3-1-2-6-4"
+         cx="50.648808"
+         cy="66.145836"
+         rx="4.648191"
+         ry="4.7981329" />
+      <circle
+         style="display:inline;fill:#ff00ff;stroke-width:0.264583"
+         id="path258-7"
+         cx="9.8273802"
+         cy="74.729164"
+         r="2" />
+      <circle
+         style="display:inline;fill:#ff00ff;stroke-width:0.264583"
+         id="path258-5-9"
+         cx="23.434523"
+         cy="74.729164"
+         r="2" />
+      <circle
+         style="display:inline;fill:#ff00ff;stroke-width:0.264583"
+         id="path258-5-3-8"
+         cx="37.041668"
+         cy="74.729164"
+         r="2" />
+      <circle
+         style="display:inline;fill:#ff00ff;stroke-width:0.264583"
+         id="path258-5-3-5-0"
+         cx="50.648808"
+         cy="74.729164"
+         r="2" />
+    </g>
+    <circle
+       style="display:inline;mix-blend-mode:normal;fill:#0000ff;stroke-width:0.264583"
+       id="path387"
+       cx="42.333332"
+       cy="25.135416"
+       r="3" />
+    <circle
+       style="display:inline;mix-blend-mode:normal;fill:#00ff00;stroke-width:0.264583"
+       id="path251"
+       cx="15.875"
+       cy="25.135416"
+       r="3" />
+  </g>
+  <g
+     inkscape:groupmode="layer"
+     id="layer3"
+     inkscape:label="text"
+     style="display:inline;mix-blend-mode:normal"
+     sodipodi:insensitive="true">
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.05556px;line-height:1.25;font-family:'Fira Code';-inkscape-font-specification:'Fira Code';fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       x="11.03984"
+       y="9.0306625"
+       id="text862">Sequencer</text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.88056px;line-height:1.25;font-family:'Fira Code';-inkscape-font-specification:'Fira Code';letter-spacing:0px;display:inline;mix-blend-mode:normal;stroke-width:0.264583"
+       x="35.810528"
+       y="19.797979"
+       id="text255-0"><tspan
+         sodipodi:role="line"
+         id="tspan253-7"
+         x="35.810528"
+         y="19.797979"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Fira Code';-inkscape-font-specification:'Fira Code';stroke-width:0.264583">output</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.88056px;line-height:1.25;font-family:'Fira Code';-inkscape-font-specification:'Fira Code';letter-spacing:0px;display:inline;mix-blend-mode:normal;stroke-width:0.264583"
+       x="10.000717"
+       y="19.649813"
+       id="text255"><tspan
+         sodipodi:role="line"
+         id="tspan253"
+         x="10.000717"
+         y="19.649813"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Fira Code';-inkscape-font-specification:'Fira Code';stroke-width:0.264583">clock</tspan></text>
+  </g>
+</svg>

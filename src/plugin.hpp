@@ -8,3 +8,4 @@ extern Plugin *pluginInstance;
 extern Model *modelComparator;
 extern Model *modelMuxDemux;
 extern Model *modelClock;
+extern Model *modelSequencer;

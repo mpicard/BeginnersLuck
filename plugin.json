@@ -30,6 +30,12 @@
       "name": "Clock",
       "description": "Simple clock generator",
       "tags": []
+    },
+    {
+      "slug": "Sequencer",
+      "name": "Sequencer",
+      "description": "Simple 8 step sequencer",
+      "tags": []
     }
   ]
 }
