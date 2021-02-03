@@ -24,6 +24,12 @@
       "name": "MuxDemux",
       "description": "Multiplexer / Demultiplexer",
       "tags": []
+    },
+    {
+      "slug": "Clock",
+      "name": "Clock",
+      "description": "Simple clock generator",
+      "tags": []
     }
   ]
 }

@@ -8,4 +8,5 @@ void init(Plugin *p)
 
 	p->addModel(modelComparator);
 	p->addModel(modelMuxDemux);
+	p->addModel(modelClock);
 }
