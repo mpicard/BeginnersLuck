@@ -51,7 +51,7 @@ void Comparator::process(const ProcessArgs &args)
       lights[i].setBrightness(out);
     }
   }
-}
+};
 
 struct ComparatorWidget : ModuleWidget
 {
@@ -69,7 +69,7 @@ struct ComparatorWidget : ModuleWidget
     addOutput(createOutputCentered<PJ3410Port>(mm2px(Vec(20.783, 106.829)), module, Comparator::OUTPUT_2));
 
     addChild(createLightCentered<SmallLight<GreenLight>>(mm2px(Vec(27.5, 50.448)), module, Comparator::LIGHT_1));
-    addChild(createLightCentered<SmallLight<GreenLight>>(mm2px(Vec(27.5, 107.069)), module, Comparator::LIGHT_1));
+    addChild(createLightCentered<SmallLight<GreenLight>>(mm2px(Vec(27.5, 107.069)), module, Comparator::LIGHT_2));
   }
 };
 
