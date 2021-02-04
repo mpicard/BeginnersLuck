@@ -10,4 +10,5 @@ void init(Plugin *p)
 	p->addModel(modelMuxDemux);
 	p->addModel(modelClock);
 	p->addModel(modelSequencer);
+	p->addModel(modelDivider);
 }

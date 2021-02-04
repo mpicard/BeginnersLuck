@@ -36,6 +36,12 @@
       "name": "Sequencer",
       "description": "Simple 8 step sequencer",
       "tags": []
+    },
+    {
+      "slug": "Divider",
+      "name": "Divider",
+      "description": "",
+      "tags": []
     }
   ]
 }
