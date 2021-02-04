@@ -11,4 +11,5 @@ void init(Plugin *p)
 	p->addModel(modelClock);
 	p->addModel(modelSequencer);
 	p->addModel(modelDivider);
+	p->addModel(modelRandom);
 }
