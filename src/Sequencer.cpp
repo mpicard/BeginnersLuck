@@ -40,7 +40,7 @@ struct Sequencer : Module
 		NUM_LIGHTS
 	};
 
-	dsp::SchmittTrigger edgeDetector;
+	dsp::SchmittTrigger clockTrigger;
 
 	int step = 0;
 
@@ -55,7 +55,7 @@ struct Sequencer : Module
 
 	void process(const ProcessArgs &args) override
 	{
-		if (edgeDetector.process(inputs[CLOCK_INPUT].getVoltage()))
+		if (clockTrigger.process(inputs[CLOCK_INPUT].getVoltage()))
 		{
 			step = (step + 1) & 7;
 		}

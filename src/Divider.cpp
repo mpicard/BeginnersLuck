@@ -1,20 +1,6 @@
-#include "dsp/digital.hpp"
 #include "plugin.hpp"
 
 #define TRIG_TIME 1e-3f
-
-struct div2
-{
-	bool status;
-
-	div2() { status = false; }
-
-	bool process()
-	{
-		status ^= 1;
-		return status;
-	}
-};
 
 struct Divider : Module
 {
@@ -25,7 +11,8 @@ struct Divider : Module
 
 	enum InputIds
 	{
-		MAIN_IN_INPUT,
+		MAIN_INPUT,
+		RESET_INPUT,
 		NUM_INPUTS
 	};
 
@@ -51,32 +38,45 @@ struct Divider : Module
 		NUM_LIGHTS
 	};
 
-	div2 dividers[NUM_OUTPUTS];
+	dsp::ClockDivider dividers[NUM_OUTPUTS];
 	dsp::PulseGenerator pg[NUM_OUTPUTS];
-	dsp::SchmittTrigger edgeDetector;
+	dsp::SchmittTrigger clockTrigger;
+	dsp::SchmittTrigger resetTrigger;
 
 	Divider()
 	{
 		config(NUM_PARAMS, NUM_INPUTS, NUM_OUTPUTS, NUM_LIGHTS);
+		for (int i = 0; i < NUM_OUTPUTS; i++)
+		{
+			dividers[i].setDivision(2);
+		}
 	}
 
-	void iterActive(int idx)
+	void iterActive(int i)
 	{
-		if (idx > NUM_OUTPUTS - 1)
+		if (i > NUM_OUTPUTS - 1)
 			return;
 
-		bool activation = dividers[idx].process();
-		pg[idx].trigger(TRIG_TIME);
+		bool active = dividers[i].process();
+		pg[i].trigger(TRIG_TIME);
 
-		if (activation)
+		if (active)
 		{
-			iterActive(idx + 1);
+			iterActive(i + 1);
 		}
 	}
 
 	void process(const ProcessArgs &args) override
 	{
-		if (edgeDetector.process(inputs[MAIN_IN_INPUT].getVoltage()))
+		if (resetTrigger.process(inputs[RESET_INPUT].getVoltage()))
+		{
+			for (int i = 0; i < NUM_OUTPUTS; i++)
+			{
+				dividers[i].reset();
+			}
+		}
+
+		if (clockTrigger.process(inputs[MAIN_INPUT].getVoltage()))
 		{
 			iterActive(0); // this will run the first divider and iterate through next
 		}
@@ -97,7 +97,8 @@ struct DividerWidget : ModuleWidget
 		setModule(module);
 		setPanel(APP->window->loadSvg(asset::plugin(pluginInstance, "res/Divider.svg")));
 
-		addInput(createInputCentered<PJ301MPort>(mm2px(Vec(11.812, 24.746)), module, Divider::MAIN_IN_INPUT));
+		addInput(createInputCentered<PJ301MPort>(mm2px(Vec(11.812, 24.746)), module, Divider::MAIN_INPUT));
+		addInput(createInputCentered<PJ301MPort>(mm2px(Vec(21, 24.746)), module, Divider::RESET_INPUT));
 
 		addOutput(createOutputCentered<PJ301MPort>(mm2px(Vec(21.261, 52.338)), module, Divider::OUTPUT2_OUTPUT));
 		addOutput(createOutputCentered<PJ301MPort>(mm2px(Vec(21.261, 66.954)), module, Divider::OUTPUT4_OUTPUT));
