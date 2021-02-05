@@ -48,6 +48,12 @@
       "name": "Random",
       "description": "",
       "tags": []
+    },
+    {
+      "slug": "ADSR",
+      "name": "ADSR",
+      "description": "",
+      "tags": []
     }
   ]
 }

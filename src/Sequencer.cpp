@@ -44,8 +44,7 @@ struct Sequencer : Module
 
 	int step = 0;
 
-	Sequencer()
-	{
+	Sequencer() {
 		config(NUM_PARAMS, NUM_INPUTS, NUM_OUTPUTS, NUM_LIGHTS);
 		for (int i = STEP_1_PARAM; i < Sequencer::NUM_PARAMS; i++)
 		{
