@@ -1,10 +1,9 @@
 #include "RCFilter.hpp"
-#include "dsp/digital.hpp"
 #include "plugin.hpp"
 
 #define EPSILON 1e-9
 
-// exponential version
+// exponential envelops
 struct ADSR : Module {
   enum ParamIds {
     ATK_PARAM,
@@ -97,25 +96,19 @@ struct ADSR : Module {
 struct ADSRWidget : ModuleWidget {
   ADSRWidget(ADSR *module) {
     setModule(module);
-    setPanel(APP->window->loadSvg(
-        asset::plugin(pluginInstance, "res/Template.svg")));
+    setPanel(APP->window->loadSvg(asset::plugin(pluginInstance, "res/Template.svg")));
     box.size = Vec(6 * RACK_GRID_WIDTH, RACK_GRID_HEIGHT);
 
     addInput(createInput<PJ301MPort>(Vec(10, 280), module, ADSR::GATE_INPUT));
 
-    addOutput(
-        createOutput<PJ301MPort>(Vec(55, 280), module, ADSR::ENVELOPE_OUTPUT));
+    addOutput(createOutput<PJ301MPort>(Vec(55, 280), module, ADSR::ENVELOPE_OUTPUT));
 
     addParam(createParam<RoundBlackKnob>(Vec(45, 60), module, ADSR::ATK_PARAM));
-    addParam(
-        createParam<RoundBlackKnob>(Vec(45, 110), module, ADSR::DEC_PARAM));
-    addParam(
-        createParam<RoundBlackKnob>(Vec(45, 160), module, ADSR::SUS_PARAM));
-    addParam(
-        createParam<RoundBlackKnob>(Vec(45, 210), module, ADSR::REL_PARAM));
+    addParam(createParam<RoundBlackKnob>(Vec(45, 110), module, ADSR::DEC_PARAM));
+    addParam(createParam<RoundBlackKnob>(Vec(45, 160), module, ADSR::SUS_PARAM));
+    addParam(createParam<RoundBlackKnob>(Vec(45, 210), module, ADSR::REL_PARAM));
 
-    addChild(createLight<SmallLight<GreenLight>>(Vec(20, 310), module,
-                                                 ADSR::GATE_LIGHT));
+    addChild(createLight<SmallLight<GreenLight>>(Vec(20, 310), module, ADSR::GATE_LIGHT));
   }
 };
 

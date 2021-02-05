@@ -20,11 +20,7 @@ struct Random : Module {
     NUM_LIGHTS,
   };
 
-  enum {
-    UNIFORM = 0,
-    NORMAL = 1,
-    NUM_DISTRIBUTIONS
-  };
+  enum { UNIFORM = 0, NORMAL = 1, NUM_DISTRIBUTIONS };
 
   int counter;
   float value;

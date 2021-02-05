@@ -51,8 +51,7 @@ struct MuxDemux : Module {
   void process(const ProcessArgs& args) override {
     // Mux
     lights[selMux].setBrightness(0.f);
-    selMux =
-        (unsigned int)clamp((int)params[PARAM_M].getValue(), 0, NUM_MUX_INPUTS);
+    selMux = (unsigned int)clamp((int)params[PARAM_M].getValue(), 0, NUM_MUX_INPUTS);
     lights[selMux].setBrightness(1.f);
 
     if (outputs[OUTPUT_MAIN].isConnected() && outputs[selMux].isConnected()) {
@@ -61,8 +60,7 @@ struct MuxDemux : Module {
 
     // Demux
     lights[selDemux + NUM_MUX_INPUTS + 1].setBrightness(0.f);
-    selDemux = (unsigned int)clamp((int)params[PARAM_D].getValue(), 0,
-                                   NUM_DEMUX_OUTPUTS);
+    selDemux = (unsigned int)clamp((int)params[PARAM_D].getValue(), 0, NUM_DEMUX_OUTPUTS);
     lights[selDemux + NUM_MUX_INPUTS + 1].setBrightness(1.f);
 
     if (inputs[INPUT_MAIN].isConnected() && outputs[selDemux].isConnected()) {
@@ -76,35 +74,28 @@ struct MuxDemuxWidget : ModuleWidget {
 
   MuxDemuxWidget(MuxDemux* module) {
     setModule(module);
-    setPanel(APP->window->loadSvg(
-        asset::plugin(pluginInstance, "res/Template.svg")));
+    setPanel(APP->window->loadSvg(asset::plugin(pluginInstance, "res/Template.svg")));
 
     box.size = Vec(6 * RACK_GRID_WIDTH, RACK_GRID_HEIGHT);
 
     for (int i = MuxDemux::INPUT_M1; i < MuxDemux::INPUT_M4; i++) {
       addInput(createInput<PJ301MPort>(Vec(10, 80 + i * 30), module, i));
-      addChild(
-          createLight<TinyLight<GreenLight>>(Vec(40, 90 + i * 30), module, i));
+      addChild(createLight<TinyLight<GreenLight>>(Vec(40, 90 + i * 30), module, i));
     }
 
-    addOutput(
-        createOutput<PJ3410Port>(Vec(50, 100), module, MuxDemux::OUTPUT_MAIN));
+    addOutput(createOutput<PJ3410Port>(Vec(50, 100), module, MuxDemux::OUTPUT_MAIN));
 
-    addParam(createParam<RoundBlackSnapKnob>(Vec(50, 60), module,
-                                             MuxDemux::PARAM_M));
+    addParam(createParam<RoundBlackSnapKnob>(Vec(50, 60), module, MuxDemux::PARAM_M));
 
-    addInput(createInput<PJ301MPort>(Vec(10, 100 + DEMUX_Y), module,
-                                     MuxDemux::INPUT_MAIN));
+    addInput(createInput<PJ301MPort>(Vec(10, 100 + DEMUX_Y), module, MuxDemux::INPUT_MAIN));
 
     for (int i = MuxDemux::OUTPUT_D1; i < MuxDemux::OUTPUT_D4; i++) {
-      addOutput(
-          createOutput<PJ3410Port>(Vec(50, i * 30 + 50 + DEMUX_Y), module, i));
-      addChild(createLight<TinyLight<GreenLight>>(
-          Vec(44, i * 30 + 60 + DEMUX_Y), module, i + MuxDemux::LIGHT_D1));
+      addOutput(createOutput<PJ3410Port>(Vec(50, i * 30 + 50 + DEMUX_Y), module, i));
+      addChild(createLight<TinyLight<GreenLight>>(Vec(44, i * 30 + 60 + DEMUX_Y), module,
+                                                  i + MuxDemux::LIGHT_D1));
     }
 
-    addParam(createParam<RoundBlackSnapKnob>(Vec(10, 60 + DEMUX_Y), module,
-                                             MuxDemux::PARAM_D));
+    addParam(createParam<RoundBlackSnapKnob>(Vec(10, 60 + DEMUX_Y), module, MuxDemux::PARAM_D));
   }
 };
 

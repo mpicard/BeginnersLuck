@@ -58,8 +58,7 @@ struct Divider : Module {
     }
 
     if (clockTrigger.process(inputs[MAIN_INPUT].getVoltage())) {
-      iterActive(
-          0);  // this will run the first divider and iterate through next
+      iterActive(0);  // this will run the first divider and iterate through next
     }
 
     for (int i = 0; i < NUM_OUTPUTS; i++) {
@@ -73,35 +72,33 @@ struct Divider : Module {
 struct DividerWidget : ModuleWidget {
   DividerWidget(Divider* module) {
     setModule(module);
-    setPanel(
-        APP->window->loadSvg(asset::plugin(pluginInstance, "res/Divider.svg")));
+    setPanel(APP->window->loadSvg(asset::plugin(pluginInstance, "res/Divider.svg")));
 
-    addInput(createInputCentered<PJ301MPort>(mm2px(Vec(11.812, 24.746)), module,
-                                             Divider::MAIN_INPUT));
-    addInput(createInputCentered<PJ301MPort>(mm2px(Vec(21, 24.746)), module,
-                                             Divider::RESET_INPUT));
+    addInput(
+        createInputCentered<PJ301MPort>(mm2px(Vec(11.812, 24.746)), module, Divider::MAIN_INPUT));
+    addInput(createInputCentered<PJ301MPort>(mm2px(Vec(21, 24.746)), module, Divider::RESET_INPUT));
 
-    addOutput(createOutputCentered<PJ301MPort>(
-        mm2px(Vec(21.261, 52.338)), module, Divider::OUTPUT2_OUTPUT));
-    addOutput(createOutputCentered<PJ301MPort>(
-        mm2px(Vec(21.261, 66.954)), module, Divider::OUTPUT4_OUTPUT));
-    addOutput(createOutputCentered<PJ301MPort>(
-        mm2px(Vec(21.261, 81.511)), module, Divider::OUTPUT8_OUTPUT));
-    addOutput(createOutputCentered<PJ301MPort>(
-        mm2px(Vec(21.261, 96.035)), module, Divider::OUTPUT16_OUTPUT));
-    addOutput(createOutputCentered<PJ301MPort>(
-        mm2px(Vec(21.261, 110.615)), module, Divider::OUTPUT32_OUTPUT));
+    addOutput(createOutputCentered<PJ301MPort>(mm2px(Vec(21.261, 52.338)), module,
+                                               Divider::OUTPUT2_OUTPUT));
+    addOutput(createOutputCentered<PJ301MPort>(mm2px(Vec(21.261, 66.954)), module,
+                                               Divider::OUTPUT4_OUTPUT));
+    addOutput(createOutputCentered<PJ301MPort>(mm2px(Vec(21.261, 81.511)), module,
+                                               Divider::OUTPUT8_OUTPUT));
+    addOutput(createOutputCentered<PJ301MPort>(mm2px(Vec(21.261, 96.035)), module,
+                                               Divider::OUTPUT16_OUTPUT));
+    addOutput(createOutputCentered<PJ301MPort>(mm2px(Vec(21.261, 110.615)), module,
+                                               Divider::OUTPUT32_OUTPUT));
 
-    addChild(createLightCentered<MediumLight<RedLight>>(
-        mm2px(Vec(5.78, 44.878)), module, Divider::LIGHT2_LIGHT));
-    addChild(createLightCentered<MediumLight<RedLight>>(
-        mm2px(Vec(5.78, 59.166)), module, Divider::LIGHT4_LIGHT));
-    addChild(createLightCentered<MediumLight<RedLight>>(
-        mm2px(Vec(5.78, 73.982)), module, Divider::LIGHT8_LIGHT));
-    addChild(createLightCentered<MediumLight<RedLight>>(
-        mm2px(Vec(5.732, 88.515)), module, Divider::LIGHT16_LIGHT));
-    addChild(createLightCentered<MediumLight<RedLight>>(
-        mm2px(Vec(5.78, 103.086)), module, Divider::LIGHT32_LIGHT));
+    addChild(createLightCentered<MediumLight<RedLight>>(mm2px(Vec(5.78, 44.878)), module,
+                                                        Divider::LIGHT2_LIGHT));
+    addChild(createLightCentered<MediumLight<RedLight>>(mm2px(Vec(5.78, 59.166)), module,
+                                                        Divider::LIGHT4_LIGHT));
+    addChild(createLightCentered<MediumLight<RedLight>>(mm2px(Vec(5.78, 73.982)), module,
+                                                        Divider::LIGHT8_LIGHT));
+    addChild(createLightCentered<MediumLight<RedLight>>(mm2px(Vec(5.732, 88.515)), module,
+                                                        Divider::LIGHT16_LIGHT));
+    addChild(createLightCentered<MediumLight<RedLight>>(mm2px(Vec(5.78, 103.086)), module,
+                                                        Divider::LIGHT32_LIGHT));
   }
 };
 

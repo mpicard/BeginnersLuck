@@ -58,16 +58,12 @@ struct ClockWidget : ModuleWidget {
 
 ClockWidget::ClockWidget(Clock* module) {
   setModule(module);
-  setPanel(
-      APP->window->loadSvg(asset::plugin(pluginInstance, "res/Template.svg")));
+  setPanel(APP->window->loadSvg(asset::plugin(pluginInstance, "res/Template.svg")));
   box.size = Vec(6 * RACK_GRID_WIDTH, RACK_GRID_HEIGHT);
 
-  addParam(
-      createParam<RoundBlackKnob>(Vec(30, 70), module, Clock::PARAM_TEMPO));
-  addOutput(
-      createOutput<PJ3410Port>(Vec(30, 180), module, Clock::OUTPUT_CLOCK));
-  addChild(createLight<MediumLight<GreenLight>>(Vec(66, 190), module,
-                                                Clock::LIGHT_CLOCK));
+  addParam(createParam<RoundBlackKnob>(Vec(30, 70), module, Clock::PARAM_TEMPO));
+  addOutput(createOutput<PJ3410Port>(Vec(30, 180), module, Clock::OUTPUT_CLOCK));
+  addChild(createLight<MediumLight<GreenLight>>(Vec(66, 190), module, Clock::LIGHT_CLOCK));
 }
 
 Model* modelClock = createModel<Clock, ClockWidget>("Clock");
