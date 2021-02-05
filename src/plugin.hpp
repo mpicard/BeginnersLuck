@@ -12,3 +12,4 @@ extern Model *modelSequencer;
 extern Model *modelDivider;
 extern Model *modelRandom;
 extern Model *modelADSR;
+extern Model *modelEnvFollower;

@@ -12,4 +12,5 @@ void init(Plugin *p) {
   p->addModel(modelDivider);
   p->addModel(modelRandom);
   p->addModel(modelADSR);
+  p->addModel(modelEnvFollower);
 }

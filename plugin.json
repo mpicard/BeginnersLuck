@@ -54,6 +54,12 @@
       "name": "ADSR",
       "description": "",
       "tags": []
+    },
+    {
+      "slug": "EnvFollower",
+      "name": "EnvFollower",
+      "description": "",
+      "tags": []
     }
   ]
 }
