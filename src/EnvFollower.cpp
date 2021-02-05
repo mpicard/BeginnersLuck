@@ -64,6 +64,31 @@ struct EnvFollowerWidget : ModuleWidget {
   EnvFollowerWidget(EnvFollower *module) {
     setModule(module);
     setPanel(APP->window->loadSvg(asset::plugin(pluginInstance, "res/Template.svg")));
+    box.size = Vec(6 * RACK_GRID_WIDTH, RACK_GRID_HEIGHT);
+
+    {
+      Title *title = new Title(box.size.x);
+      title->setText("Env Follower");
+      addChild(title);
+    }
+
+    {
+      Label *label = new Label(Vec(box.size.x / 2, 70));
+      label->setText("Tau");
+      addChild(label);
+    }
+
+    {
+      Label *label = new Label(Vec(14, 250));
+      label->setText("In");
+      addChild(label);
+    }
+
+    {
+      Label *label = new Label(Vec(56, 250));
+      label->setText("Out");
+      addChild(label);
+    }
 
     addParam(createParam<RoundBlackKnob>(Vec(30, 110), module, EnvFollower::TAU_PARAM));
 
